@@ -38,42 +38,13 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// const message = document.createElement('div');
-// message.classList.add('cookie-message');
-// message.innerHTML ='We use cookies to improve the performance of the site. By staying on our site, you agree to the terms use of cookies. <button class="btn btn--close-cookie">Ok</button>';
-// const header = document.querySelector('.header');
-// header.prepend(message);
-
-// document.querySelector('.btn--close-cookie').addEventListener('click', function(){
-//   message.remove();
-// });
-// message.style.height = Number.parseFloat(getComputedStyle(message).height) + 10 + 'px';
-
-
-
 btnScrollTo.addEventListener('click', function(e){
 
   const section1Coords = section1.getBoundingClientRect(); //return position of the element
 
-  // window.scrollTo({
-  //   left: section1Coords.left + window.pageXOffset, 
-  //   top: section1Coords.top + window.pageYOffset,
-  //   behavior: 'smooth'
-  // });
-
   section1.scrollIntoView({behavior: 'smooth'});
 
 });
-
-// smooth page navigation
-
-// document.querySelectorAll('.nav__link').forEach(function(htmlElement){
-//   htmlElement.addEventListener('click', function(e){
-//     e.preventDefault();
-//     const href = this.getAttribute('href');
-//     document.querySelector(href).scrollIntoView({behavior: 'smooth'});
-//   });
-// });
 
 document.querySelector('.nav__links').addEventListener('click', function(e){
   e.preventDefault();
@@ -120,19 +91,6 @@ const navLinksHoverAnimation = function(e){
 
 nav.addEventListener('mouseover', navLinksHoverAnimation.bind(0.4));
 nav.addEventListener('mouseout', navLinksHoverAnimation.bind(1));
-
-
-//Sticky navigation
-// const section1Coords = section1.getBoundingClientRect();
-
-// window.addEventListener('scroll', function(e){
-//   if(this.window.scrollY > section1Coords.top){
-//     nav.classList.add('sticky');
-//   }else{
-//     nav.classList.remove('stiky');
-//   }
-// });
-
 
 //Sticky navigationt - Intersection Observer API
 
@@ -249,8 +207,6 @@ document.addEventListener('keydown', function(e){
   else if (e.key === 'ArrowLeft') previousSlide();
 });
 
-
-//Lifecycle DOM Events
 
 
 
